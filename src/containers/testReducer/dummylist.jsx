@@ -13,9 +13,17 @@ class Dummylist extends Component{
         this.props.function2();
     }
     render(){
+        fetch('http://api.icndb.com/jokes/random')
+        .then(response =>response.json())
+        .then((data)=>{
+            // console.log(data.value.joke)
+            document.getElementById('chucknorrisjoke').innerText = `${data.value.joke}`
+        })
         return(
             <div>
-                Hello World!
+                Hello World!<br />
+                <div id="chucknorrisjoke"></div>
+
                 <p></p>
                 <input type="text" id="textfield"></input><br />
                 <button className="btn btn-primary" onClick={this.handleClick}>Click to add your message!</button><br></br>
