@@ -1,9 +1,10 @@
 import React from 'react';
+import Dummylist from '../containers/testReducer/dummylist'
 
 const App = () => {
   return (
     <div className="app">
-      <p>React + Redux starter</p>
+      <Dummylist />
     </div>
   );
 };
