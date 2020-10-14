@@ -5,7 +5,9 @@ class Dummylist extends Component{
         super(props)
     }
     handleClick=()=>{
-        this.props.function();
+        let text = document.getElementById('textfield')
+        this.props.function(text.value);
+        text.value = ""
     }
     handleClick2=()=>{
         this.props.function2();
@@ -15,10 +17,17 @@ class Dummylist extends Component{
             <div>
                 Hello World!
                 <p></p>
-                <button className="btn btn-primary" onClick={this.handleClick}>Click me for message</button><br></br>
-                <button className="btn btn-success" onClick={this.handleClick2}>Click me for default</button>
+                <input type="text" id="textfield"></input><br />
+                <button className="btn btn-primary" onClick={this.handleClick}>Click to add your message!</button><br></br>
+                <button className="btn btn-danger" onClick={this.handleClick2}>Click me to clear all messages!</button>
                 <br></br>
-                Text: {this.props.text}
+                {this.props.text != null && <div>
+                    <strong>Messages:</strong>
+                    <ul>
+                        {this.props.text.map((text,index)=><li key={index}>{text}</li>)}
+                    </ul>
+                </div>
+                }
             </div>
         )
     }
@@ -34,11 +43,11 @@ const mapStateToProps=(state)=>{
 
 
 import {bindActionCreators} from 'redux'
-import {textDefault, textYo} from './textYo'
+import {textClear, textYo} from './textYo'
 const mapDispatchToProps =(dispatch)=>{
     return{
         function: bindActionCreators(textYo, dispatch),
-        function2: bindActionCreators(textDefault, dispatch)
+        function2: bindActionCreators(textClear, dispatch)
     }
 
 

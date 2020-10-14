@@ -1,9 +1,17 @@
-const textReducer = (state=[], action) =>{
+const textReducer = (state=null, action) =>{
     switch (action.type){
         case 'TEXT_YO':
-            return action.payload
+            if (action.payload != "") {
+                if (state == null){
+                    return [action.payload]
+                }
+                return [...state, action.payload]
+            }
+            return state
+        case 'TEXT_CLEAR':
+            return null
         default:
-            return "DEFAULT TEXT"
+            return state
     }
 }
 export default textReducer
