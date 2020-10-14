@@ -1,13 +1,13 @@
-import text from './alltext'
+// import text from './alltext'
 
-export const textYo = () =>{
+export const textYo = (text) =>{
     return {
         type: 'TEXT_YO',
         payload: text
     }
 }
-export const textDefault =()=>{
+export const textClear =()=>{
     return {
-        type: ''
+        type: 'TEXT_CLEAR'
     }
 }

@@ -13,7 +13,8 @@ import '../assets/stylesheets/application.scss';
 // State and reducers
 import textReducer from './containers/testReducer/text_reducer';
 const reducers = combineReducers({
-  changeMe: textReducer
+  changeMe: textReducer, //dummy testreducer
+
 });
 
 // Middleware
@@ -22,7 +23,7 @@ const middlewares = applyMiddleware(logger);
 // render an instance of the component in the DOM
 ReactDOM.render(
   <Provider store={createStore(reducers, {}, middlewares)}>
-    <App />
+      <App />
   </Provider>,
   document.getElementById('root')
 );
