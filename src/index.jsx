@@ -9,9 +9,11 @@ import {logger}  from 'redux-logger'
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
+
 // State and reducers
+import textReducer from './containers/testReducer/text_reducer';
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  changeMe: textReducer
 });
 
 // Middleware
