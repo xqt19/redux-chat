@@ -1,20 +1,6 @@
 import React, {Component} from 'react'
-
-class ChannelList extends Component{
-    render(){
-        return(
-            <ul>{["A","B","C","D","E"].map((letter)=><li>{letter}</li>)}</ul>
-        )
-    }
-}
-
-class Channel extends Component{
-    render(){
-        return(
-            <h1> Channel Here Coming Soon </h1>
-        )
-    }
-}
+import ChannelList from './ChannelList'
+import Channel from './Channel'
 
 class ChatApp extends Component {
     constructor (props){
@@ -39,5 +25,7 @@ class ChatApp extends Component {
         )
     }
 }
+
+
 
 export default ChatApp
