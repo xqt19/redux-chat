@@ -8,7 +8,7 @@ class Channel extends Component{
         }
     }
     componentDidMount = ()=>{
-            // setInterval(this.myFunction, 4000);
+            setInterval(this.myFunction, 4000);
     }
     myFunction = () => {
         this.props.getMessages(this.props.active)
