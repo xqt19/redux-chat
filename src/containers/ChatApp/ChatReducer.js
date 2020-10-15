@@ -1,4 +1,4 @@
-import {SETCHANNELLIST,SETACTIVECHANNEL} from './ChatActions'
+import {SETCHANNELLIST,SETACTIVECHANNEL,LOADCHANNELMESSAGES} from './ChatActions'
 
 export const chatReducer = (state=[], action) =>{
     switch(action.type){
@@ -12,6 +12,15 @@ export const chatReducer = (state=[], action) =>{
 export const activeChannelReducer =(state=null, action)=>{
     switch (action.type){
         case SETACTIVECHANNEL:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const channelMessagesReducer = (state=null, action)=>{
+    switch (action.type){
+        case LOADCHANNELMESSAGES:
             return action.payload
         default:
             return state
