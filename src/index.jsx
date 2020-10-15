@@ -13,13 +13,15 @@ import '../assets/stylesheets/application.scss';
 
 // State and reducers
 import {textReducer, jokeReducer} from './containers/testReducer/text_reducer';
-import {chatReducer, activeChannelReducer, channelMessagesReducer} from './containers/ChatApp/ChatReducer';
+import {chatReducer, activeChannelReducer, channelMessagesReducer, inputBarReducer, nameBarReducer} from './containers/ChatApp/ChatReducer';
 const reducers = combineReducers({
   changeMe: textReducer, //dummy text reducer
   changeMe2: jokeReducer, //dummy chuck norris joke promise reducer
   channellist: chatReducer,
   activechannel: activeChannelReducer,
   channelmessages: channelMessagesReducer,
+  inputbar: inputBarReducer,
+  namebar: nameBarReducer
 });
 
 // Middleware
