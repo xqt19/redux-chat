@@ -1,4 +1,4 @@
-const channels = ["Austria", "Berlin", "Canberra", "Tokyo", "Zimbabwe"]
+const channels = ["Austria", "Berlin", "Canberra", "Singapore", "Tokyo", "Zimbabwe"]
 
 export const SETCHANNELLIST = "SET_CHANNEL_LIST"
 export const setChannelList =()=>{

@@ -45,7 +45,7 @@ class Channel extends Component{
     render(){
         return(
             <div>
-                <div className="vh-80">
+                <div>
                     {this.props.active != null && <h1> #{this.props.active} </h1>}
                     {this.props.active == null && <h3>Pick a Channel to start chatting!</h3>}
                     <br />
@@ -57,6 +57,9 @@ class Channel extends Component{
                     }                  
                     </ul>                    
                 </div>
+                <br />
+                <hr />
+                <br />
                 {this.props.active != null && 
                 <div className="d-flex text-right" style={{paddingRight: "20%"}}>
                 My Name is <input type="text"
@@ -66,6 +69,7 @@ class Channel extends Component{
                 </div>
                 }
 
+                <br />
                 {this.props.active != null &&
                 <div>
                     <input type="text" 

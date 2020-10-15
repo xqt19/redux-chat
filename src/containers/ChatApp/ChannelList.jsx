@@ -15,7 +15,7 @@ class ChannelList extends Component{
         return(
             this.props.channels.map((city,index)=>
                 <div key={index} style={{margin: "5px"}}>
-                    <button className="btn btn-primary" onClick={()=>this.handleClick(city)}>{city}</button>
+                    <button className="btn btn-primary text-center" style={{width:"50%"}} onClick={()=>this.handleClick(city)}>{city}</button>
                     <br />
                 </div>
             )
