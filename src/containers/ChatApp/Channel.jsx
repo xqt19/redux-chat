@@ -42,17 +42,31 @@ class Channel extends Component{
         this.props.updateName(e.target.value)
     }
 
+    stringToColour = (str) =>{
+        var hash = 0;
+        for (var i = 0; i < str.length; i++) {
+          hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        var colour = '#';
+        for (var i = 0; i < 3; i++) {
+          var value = (hash >> (i * 8)) & 0xFF;
+          colour += ('00' + value.toString(16)).substr(-2);
+        }
+        return colour;
+    }
+
     render(){
         return(
             <div>
                 <div>
                     {this.props.active != null && <h1> #{this.props.active} </h1>}
                     {this.props.active == null && <h3>Pick a Channel to start chatting!</h3>}
+                    {this.props.active != null && (this.props.messages==null || this.props.messages.length <1 ) && <h3>Its lonely here, post the first message!</h3>}
                     <br />
-                    <ul>
+                    <ul style={{listStyle:"none"}}>
                     {this.props.messages != null && this.props.active !=null &&
                         this.props.messages.map((message,index) => 
-                    <li key={index}><strong>{message.author}</strong>: {message.content}</li>
+                    <li key={index}><strong style={{color:`${this.stringToColour(message.author)}`}}>{message.author}</strong>: {message.content}</li>
                         )
                     }                  
                     </ul>                    
