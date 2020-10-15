@@ -10,7 +10,7 @@ class ChatApp extends Component {
     render(){
         return(
             <div className="container">
-                <div><h1 className="text-center">Wagon Chatroom</h1></div>
+                <div><h1 className="text-center">Welcome to Wagon Chatroom</h1></div>
                 <br />
                <div>
                     <div className="col-sm-4">

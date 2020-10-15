@@ -1,4 +1,4 @@
-const channels = ["Austria", "Berlin", "Canberra", "Tokyo", "Zimbabwe", "peeko"]
+const channels = ["Austria", "Berlin", "Canberra", "Tokyo", "Zimbabwe"]
 
 export const SETCHANNELLIST = "SET_CHANNEL_LIST"
 export const setChannelList =()=>{
@@ -28,3 +28,27 @@ export const loadChannelMessages = (active) =>{
         }
     })
 }
+
+export const UPDATEINPUT ="UPDATE_INPUT"
+export const updateInput = (word) =>{
+    return {
+        type: UPDATEINPUT,
+        payload: word
+    }  
+}
+
+export const UPDATENAME ="UPDATE_NAME"
+export const updateName = (word) =>{
+    return {
+        type: UPDATENAME,
+        payload: word
+    }  
+}
+
+// export const SUBMITINPUT ="SUBMIT_INPUT"
+// export const submitInput = (word) =>{
+//     return {
+//         type: SUBMITINPUT,
+//         payload: word
+//     }  
+// }
