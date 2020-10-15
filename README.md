@@ -1,11 +1,6 @@
-# redux-boilerplate
+# Welcome to Redux Chatroom! 🥳
 
-Simple React + Redux starter with the following config:
+These are a few simple public chatrooms you can use with ease for online conversations. The messages disappear every hour too :)
 
-- React, ReactDOM
-- Redux, React-Redux
-- Webpack 3
-- Babel with es2015 and react presets
-- Bootstrap (css only, loaded from a cdn in `index.html`)
-- work with `.js` or `.jsx` files
-- main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+Powered using React and Redux 🚀
+Created by XQT 🍁 15/10/2020 
